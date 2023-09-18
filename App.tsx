@@ -1,20 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import "react-native-gesture-handler";
+import { StyleSheet, View } from "react-native";
+import {
+  Mulish_800ExtraBold,
+  useFonts,
+  Mulish_300Light,
+  Mulish_400Regular,
+  Mulish_600SemiBold,
+  Mulish_500Medium,
+  Mulish_700Bold,
+} from "@expo-google-fonts/mulish";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Routes } from "./src/routes";
 
 export default function App() {
+  const [isFontsLoading] = useFonts({
+    Mulish_800ExtraBold,
+    Mulish_300Light,
+    Mulish_400Regular,
+    Mulish_600SemiBold,
+    Mulish_500Medium,
+    Mulish_700Bold,
+  });
+  if (!isFontsLoading) {
+    return <View />;
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Routes />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
 });

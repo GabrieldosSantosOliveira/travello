@@ -21,10 +21,13 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FF3951"
-      }
+      },
+      "package": "com.gabriel85.travello"
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "extra": {
+      "eas": {
+        "projectId": "5d492ddc-70a1-48be-b344-8e6934735e0d"
+      }
     }
   }
 }

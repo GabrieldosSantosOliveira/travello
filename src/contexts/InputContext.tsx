@@ -5,7 +5,7 @@ export interface InputContextProps {
   withFocus: () => void;
 }
 export const InputContext = createContext<InputContextProps>(
-  {} as InputContextProps
+  {} as InputContextProps,
 );
 export const InputProvider = ({ children }: React.PropsWithChildren) => {
   const [focus, setFocus] = useState<boolean>(false);

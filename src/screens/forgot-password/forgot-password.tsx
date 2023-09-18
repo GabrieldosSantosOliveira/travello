@@ -1,8 +1,10 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import { Root } from "../../components/Input/Root";
 import { Input } from "../../components/Input/Input";
 import { Button } from "../../components/Button";
-import { useNavigation } from "@react-navigation/native";
+
 import { FloatingActionButton } from "./components/FloatingActionButton";
 
 export const ForgotPassword = () => {
@@ -18,34 +20,28 @@ export const ForgotPassword = () => {
         for verification.
       </Text>
       <View style={styles.form}>
-        <View
-          style={{
-            flexDirection: "row",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
-          <Root style={{ height: 36, width: 36 }}>
+        <View style={styles.groupForm}>
+          <Root style={styles.input}>
             <Input placeholder="6" />
           </Root>
-          <Root style={{ height: 36, width: 36 }}>
+          <Root style={styles.input}>
             <Input placeholder="9" />
           </Root>
-          <Root style={{ height: 36, width: 36 }}>
+          <Root style={styles.input}>
             <Input placeholder="7" />
           </Root>
-          <Root style={{ height: 36, width: 36 }}>
+          <Root style={styles.input}>
             <Input placeholder="5" />
           </Root>
-          <Root style={{ height: 36, width: 36 }}>
+          <Root style={styles.input}>
             <Input placeholder="4" />
           </Root>
-          <Root style={{ height: 36, width: 36 }}>
+          <Root style={styles.input}>
             <Input placeholder="9" />
           </Root>
         </View>
         <Button title="Verify" onPress={() => navigate("welcome")} />
-        <TouchableOpacity style={{ alignItems: "center" }} onPress={() => {}}>
+        <TouchableOpacity style={styles.buttonResend} onPress={() => {}}>
           <Text style={styles.resend}>
             Didn’t receive any code? Resend Again
           </Text>
@@ -57,6 +53,15 @@ export const ForgotPassword = () => {
   );
 };
 const styles = StyleSheet.create({
+  groupForm: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+  buttonResend: {
+    alignItems: "center",
+  },
+  input: { height: 36, width: 36 },
   container: {
     backgroundColor: "white",
     flex: 1,
@@ -82,11 +87,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 30,
     marginBottom: 40,
-  },
-  label: {
-    color: "#252525",
-    fontFamily: "Mulish_400Regular",
-    fontSize: 12,
   },
   resend: {
     color: "#252525",

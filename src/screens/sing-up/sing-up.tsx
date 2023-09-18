@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Header } from "./components/Header";
+import { useNavigation } from "@react-navigation/native";
+
 import { Root } from "../../components/Input/Root";
 import { Input } from "../../components/Input/Input";
 import { Email } from "../../components/Icons/Email";
@@ -7,9 +8,10 @@ import { Lock } from "../../components/Icons/Lock";
 import { CheckBox } from "../../components/CheckBox";
 import { Button } from "../../components/Button";
 import { ArrowRight } from "../../components/Icons/ArrowRight";
-import { useNavigation } from "@react-navigation/native";
 import { User } from "../../components/Icons/User";
 import { SmartPhone } from "../../components/Icons/SmartPhone";
+
+import { Header } from "./components/Header";
 
 export const SingUp = () => {
   const { navigate } = useNavigation();
@@ -33,7 +35,7 @@ export const SingUp = () => {
           <Input placeholder="Strong Password" />
           <Lock />
         </Root>
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <View style={styles.checkBox}>
           <CheckBox>
             <Text style={styles.register}>
               By checking the box you agree to our{" "}
@@ -42,9 +44,13 @@ export const SingUp = () => {
             </Text>
           </CheckBox>
         </View>
-        <Button title="Next" onPress={() => {}} iconRight={<ArrowRight />} />
+        <Button
+          title="Next"
+          onPress={() => navigate("welcome")}
+          iconRight={<ArrowRight />}
+        />
         <TouchableOpacity
-          style={{ alignItems: "center" }}
+          style={styles.buttonRegister}
           onPress={() => navigate("sing-up")}
         >
           <Text style={styles.register}>
@@ -57,6 +63,7 @@ export const SingUp = () => {
   );
 };
 const styles = StyleSheet.create({
+  buttonRegister: { alignItems: "center" },
   container: {
     backgroundColor: "white",
     flex: 1,
@@ -67,10 +74,9 @@ const styles = StyleSheet.create({
     gap: 25,
     flex: 1,
   },
-  label: {
-    color: "#252525",
-    fontFamily: "Mulish_400Regular",
-    fontSize: 12,
+  checkBox: {
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   register: {
     color: "#252525",

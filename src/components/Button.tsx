@@ -1,11 +1,5 @@
-import { ReactNode } from "react";
-import {
-  StyleProp,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  ViewStyle,
-} from "react-native";
+import type { ReactNode } from "react";
+import { StyleSheet, Text, TouchableOpacity } from "react-native";
 export interface ButtonProps {
   onPress: () => void;
   title: string;

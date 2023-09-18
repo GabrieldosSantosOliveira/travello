@@ -1,11 +1,5 @@
-import {
-  Dimensions,
-  Image,
-  ImageRequireSource,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import type { ImageRequireSource } from "react-native";
+import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 export interface SlideProps {
   img: {
     source: ImageRequireSource;

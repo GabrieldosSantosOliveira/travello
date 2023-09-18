@@ -1,21 +1,18 @@
 import { Dimensions, StyleSheet, View } from "react-native";
-import { Slide } from "./components/Slide";
 import Animated, {
-  measure,
   runOnJS,
-  runOnUI,
-  scrollTo,
   useAnimatedReaction,
   useAnimatedRef,
   useAnimatedScrollHandler,
-  useDerivedValue,
   useSharedValue,
-  withTiming,
 } from "react-native-reanimated";
-import { Dot } from "./components/Dot";
-import { FloatingActionButton } from "./components/FloatingActionButton";
 import { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
+
+import { Slide } from "./components/Slide";
+import { Dot } from "./components/Dot";
+import { FloatingActionButton } from "./components/FloatingActionButton";
+
 const slides = [
   {
     img: {
@@ -58,6 +55,7 @@ export const Onboarding = () => {
     () => x.value,
     () => {
       runOnJS(setCurrentIndex)(Number((x.value / width).toFixed()));
+      // eslint-disable-next-line prettier/prettier
     }
   );
   return (

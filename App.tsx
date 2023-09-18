@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import "react-native-gesture-handler";
 import { StyleSheet, View } from "react-native";
 import {
@@ -10,8 +11,10 @@ import {
   Mulish_700Bold,
 } from "@expo-google-fonts/mulish";
 import { SafeAreaView } from "react-native-safe-area-context";
+
 import { Routes } from "./src/routes";
 
+// eslint-disable-next-line import/no-default-export
 export default function App() {
   const [isFontsLoading] = useFonts({
     Mulish_800ExtraBold,

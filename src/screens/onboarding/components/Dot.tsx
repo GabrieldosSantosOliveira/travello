@@ -1,7 +1,7 @@
-import React from "react";
+import type React from "react";
 import { Dimensions, StyleSheet } from "react-native";
+import type { SharedValue } from "react-native-reanimated";
 import Animated, {
-  SharedValue,
   interpolate,
   interpolateColor,
   useAnimatedStyle,
@@ -21,11 +21,11 @@ export const Dot: React.FC<DotProps> = ({ index, x }) => {
       backgroundColor: interpolateColor(
         currentIndex.value,
         [index - 1, index, index + 1],
-        ["#FFB6B6", "#FF3951", "#FFB6B6"]
+        ["#FFB6B6", "#FF3951", "#FFB6B6"],
       ),
     };
   });
-  return <Animated.View style={[styles.dot, style]}></Animated.View>;
+  return <Animated.View style={[styles.dot, style]} />;
 };
 const styles = StyleSheet.create({
   dot: {

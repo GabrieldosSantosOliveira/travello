@@ -2,15 +2,10 @@ import { Image, StyleSheet, Text, View } from "react-native";
 
 export const Header = () => {
   return (
-    <View
-      style={{
-        width: 321,
-        height: 251,
-      }}
-    >
+    <View style={styles.container}>
       <Image
         source={require("./../../../assets/sing-in/1/1.png")}
-        style={{ position: "absolute", top: 0 }}
+        style={styles.image}
       />
 
       <Text style={styles.heading}>Welcome back</Text>
@@ -19,6 +14,14 @@ export const Header = () => {
   );
 };
 const styles = StyleSheet.create({
+  container: {
+    width: 321,
+    height: 251,
+  },
+  image: {
+    position: "absolute",
+    top: 0,
+  },
   heading: {
     color: "#252525",
     fontFamily: "Mulish_800ExtraBold",

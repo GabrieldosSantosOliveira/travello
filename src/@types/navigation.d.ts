@@ -3,10 +3,10 @@ export interface Routes {
   "sing-in": undefined;
   "sing-up": undefined;
   "forgot-password": undefined;
-  welcome: undefined
+  welcome: undefined;
 }
 export declare global {
   namespace ReactNavigation {
-    interface RootParamList extends Routes { }
+    type RootParamList = Routes;
   }
 }

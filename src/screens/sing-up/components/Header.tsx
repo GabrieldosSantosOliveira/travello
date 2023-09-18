@@ -5,7 +5,7 @@ export const Header = () => {
     <View style={styles.container}>
       <Image
         source={require("./../../../assets/sing-in/1/1.png")}
-        style={{ position: "absolute", top: 0 }}
+        style={styles.image}
       />
 
       <Text style={styles.heading}>Get Started</Text>
@@ -14,6 +14,7 @@ export const Header = () => {
   );
 };
 const styles = StyleSheet.create({
+  image: { position: "absolute", top: 0 },
   container: {
     alignSelf: "flex-end",
     width: 321,

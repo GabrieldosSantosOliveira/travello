@@ -1,13 +1,10 @@
-import {
-  StyleSheet,
-  TouchableOpacity,
-  TouchableOpacityProps,
-} from "react-native";
+import type { TouchableOpacityProps } from "react-native";
+import { StyleSheet, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 
-export interface FloatingActionButtonProps extends TouchableOpacityProps {}
+export type FloatingActionButtonProps = TouchableOpacityProps;
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = (
-  props
+  props,
 ) => {
   return (
     <TouchableOpacity {...props} style={styles.button}>

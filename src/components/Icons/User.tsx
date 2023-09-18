@@ -1,5 +1,6 @@
 import * as React from "react";
-import Svg, { SvgProps, Rect, Path } from "react-native-svg";
+import type { SvgProps } from "react-native-svg";
+import Svg, { Rect, Path } from "react-native-svg";
 export const User = (props: SvgProps) => (
   <Svg width={24} height={24} fill="none" {...props}>
     <Path

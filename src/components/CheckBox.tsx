@@ -1,6 +1,8 @@
-import { ReactNode, useState } from "react";
+import type { ReactNode } from "react";
+import { useState } from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+
 import { Done } from "./Icons/Done";
 
 export interface CheckBoxProps {

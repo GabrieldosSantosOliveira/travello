@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { Header } from "./components/Header";
+import { useNavigation } from "@react-navigation/native";
+
 import { Root } from "../../components/Input/Root";
 import { Input } from "../../components/Input/Input";
 import { Email } from "../../components/Icons/Email";
@@ -7,7 +8,8 @@ import { Lock } from "../../components/Icons/Lock";
 import { CheckBox } from "../../components/CheckBox";
 import { Button } from "../../components/Button";
 import { ArrowRight } from "../../components/Icons/ArrowRight";
-import { useNavigation } from "@react-navigation/native";
+
+import { Header } from "./components/Header";
 
 export const SingIn = () => {
   const { navigate } = useNavigation();
@@ -23,7 +25,7 @@ export const SingIn = () => {
           <Input placeholder="Password" />
           <Lock />
         </Root>
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <View style={styles.checkBox}>
           <CheckBox>
             <Text style={styles.label}>Remember me</Text>
           </CheckBox>
@@ -31,10 +33,14 @@ export const SingIn = () => {
             <Text style={styles.forgotPassword}>Forget password ?</Text>
           </TouchableOpacity>
         </View>
-        <View style={{ flex: 1 }} />
-        <Button title="Next" onPress={() => {}} iconRight={<ArrowRight />} />
+        <View style={styles.space} />
+        <Button
+          title="Next"
+          onPress={() => navigate("welcome")}
+          iconRight={<ArrowRight />}
+        />
         <TouchableOpacity
-          style={{ alignItems: "center" }}
+          style={styles.buttonRegister}
           onPress={() => navigate("sing-up")}
         >
           <Text style={styles.register}>
@@ -42,12 +48,18 @@ export const SingIn = () => {
             <Text style={styles.registerAttention}>Register now </Text>
           </Text>
         </TouchableOpacity>
-        <View style={{ height: 58 }} />
+        <View style={styles.footer} />
       </View>
     </View>
   );
 };
 const styles = StyleSheet.create({
+  space: {
+    flex: 1,
+  },
+  footer: { height: 58 },
+  buttonRegister: { alignItems: "center" },
+  checkBox: { flexDirection: "row", justifyContent: "space-between" },
   container: {
     flex: 1,
     backgroundColor: "white",

@@ -1,6 +1,8 @@
-import { StyleSheet, TextInput, TextInputProps } from "react-native";
+import type { TextInputProps } from "react-native";
+import { StyleSheet, TextInput } from "react-native";
+
 import { useInput } from "../../hooks/useInput";
-export interface InputProps extends TextInputProps {}
+export type InputProps = TextInputProps;
 export const Input: React.FC<InputProps> = ({ ...props }) => {
   const { withFocus, withoutFocus } = useInput();
   return (

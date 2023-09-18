@@ -1,4 +1,5 @@
 import { createStackNavigator } from "@react-navigation/stack";
+
 import { Onboarding } from "../screens/onboarding/onboarding";
 import { SingIn } from "../screens/sing-in/sing-in";
 import { SingUp } from "../screens/sing-up/sing-up";

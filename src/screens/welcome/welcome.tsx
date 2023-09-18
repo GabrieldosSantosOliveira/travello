@@ -1,9 +1,6 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-
-import { useNavigation } from "@react-navigation/native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 export const Welcome = () => {
-  const { navigate } = useNavigation();
   return (
     <View style={styles.container}>
       <Text style={styles.heading}>Welcome To Home</Text>

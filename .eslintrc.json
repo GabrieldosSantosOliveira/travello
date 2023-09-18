@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "react-native-wcandillon",
+    "plugin:react/jsx-runtime"
+  ],
+  "rules": {}
+}

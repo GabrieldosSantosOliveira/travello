@@ -1,5 +1,7 @@
-import React from "react";
-import { StyleSheet, View, ViewProps, ViewStyle } from "react-native";
+import type React from "react";
+import type { ViewProps, ViewStyle } from "react-native";
+import { StyleSheet, View } from "react-native";
+
 import { InputProvider } from "../../contexts/InputContext";
 import { useInput } from "../../hooks/useInput";
 export interface RootProps extends ViewProps {

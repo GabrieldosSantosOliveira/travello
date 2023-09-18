@@ -30,7 +30,7 @@ O Travello é uma aplicação de viagens
 
 Clone o repositório
 ```
-git clone https://github.com/GabrieldosSantosOliveira/Tarefa.git
+git clone https://github.com/GabrieldosSantosOliveira/travello.git
 ```
 Instale as dependências
 ```
